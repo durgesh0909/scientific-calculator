@@ -1,0 +1,44 @@
+print("List of Valid operators: \n + for add \n - for subtract \n * for multiply \n / for division \n % for Modulus \n ** for exponent \n sin for Sin \n cos for Cos \n tan for Tan \n degrees for radian to degrees \n radians for degrees to radians \n sqrt for square root \n exit for Exit")
+import math
+while True:
+    opr=input("ENTER THE OPREATOR PLZ: ")
+    l1=["+","-","*","/","%","**"]
+    l2=["sin","cos","tan","degrees","radians"]
+    if opr in l1:
+        a=float(input("ENTER THE FIRST NUMBER: "))
+        b=float(input("ENTER THE SECOND NUMBER: "))
+        if opr=="+":
+            print(a+b)
+        elif opr=="-":
+            print(a-b)
+        elif opr=="*":
+            print(a*b)
+        elif opr=="/" and b==0:
+            print("ERROR")
+        elif opr=="/":
+            print(a/b)
+        elif opr=="%" and b==0:
+            print("ERROR")
+        elif opr=="%" and a>0 and b>0:
+            print(a%b)
+        elif opr=="%" and (a<0 or b<0):
+            print("ENTER POSITIVE NUMBER")
+        elif opr=="**":
+            print(a**b)
+    elif opr in l2:
+        a=float(input("ENTER THE NUMBER: "))
+        if opr=="sin":
+            print(math.sin(math.radians(a)))
+        elif opr=="cos":
+            print(math.cos(math.radians(a)))
+        elif opr=="tan":
+            print(math.tan(math.radians(a)))
+        elif opr=="degrees":
+            print(math.degrees(a))
+        elif opr=="radians":
+            print(math.radians(a))
+    elif opr=="exit":
+        break
+    else:
+        print("ENTER CORRECT OPERATION")
+
